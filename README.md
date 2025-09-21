@@ -1,0 +1,15 @@
+flowchart TD
+    A([START]) --> B[Developer pushes code to GitHub]
+    B --> C[Jenkins CI/CD Pipeline]
+    C --> D[Maven Build & Unit Tests]
+    D --> E[Dockerize Application]
+    E --> F[Provision Test Server (Terraform)]
+    F --> G[Configure with Ansible]
+    G --> H[Deploy to Test Server]
+    H --> I[Automated Tests (Selenium)]
+    I --> J[Provision Prod Server (Terraform)]
+    J --> K[Configure with Ansible]
+    K --> L[Deploy to Production]
+    L --> M[Monitoring with Prometheus]
+    M --> N[Visualization with Grafana]
+    N --> O([END])
